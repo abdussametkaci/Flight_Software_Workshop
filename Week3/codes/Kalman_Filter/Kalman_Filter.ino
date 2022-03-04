@@ -29,7 +29,6 @@ long unsigned int timer = 0;
 void loop() {
 
   if (millis() - timer >= 100) {
-    mpu.read();
     sensors_event_t a, g, temp;
     mpu.getEvent(&a, &g, &temp);
     acc_value = a.acceleration.x;
