@@ -31,7 +31,6 @@ void loop() {
 
   if (millis() - timer >= 100) {
     for (int i = 0; i < STEP_NUM; i++) {
-      mpu.read();
       sensors_event_t a, g, temp;
       mpu.getEvent(&a, &g, &temp);
       acc_value = a.acceleration.x;
